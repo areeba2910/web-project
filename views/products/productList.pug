@@ -6,24 +6,22 @@ block content
         .col-md-6
             h1 Song list
         .col-md-6
-            a(href="/products/add" class="btn btn-primary float-right") Add Item
+            a(href="/products/add" class="btn btn-primary float-right") Add song
         table.table
             thead
                 tr
-                    th Item Name
-                    th Item Price
-                    th Company
-                    th Location
-                    th More Details
+                    th song name
+                    th song price
+                    th singer
+                    th more details
             tbody
                 each product in products
                     tr 
                         td=product.name
                         td=product.price
-                        td=product.city
-                        td=product.location
+                        td=product.singer
                         td=product.detail
                         td  
                             a(href="/products/delete/"+product._id    class="btn btn-danger") Delete
                             a(href="/products/edit/"+product._id    class="btn btn-info") Edit
-                            a(href="/products/cart/"+product._id    class="btn btn-info ml-3") Add To Cart
+                            a(href="/products/cart/"+product._id    class="btn btn-info ml-3") Add To list

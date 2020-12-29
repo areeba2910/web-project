@@ -6,20 +6,17 @@ block content
     table(class="table") 
         thead 
             tr  
-                th Item Name
-                th Item Price
-                th City
-                th Location
-                th More Details
-                th Actions
+                th song name
+                th song price
+                th singer
+                th more details
         each item in cart
             - total += Number(item.price)
             tbody
                 tr
                     td=item.name        
                     td=item.price
-                    td=item.city
-                    td=item.location
+                    td=item.singer
                     td=item.detail
                     td
                         a(href="cart/remove/"+item._id ,class="btn btn-danger") Remove

@@ -10,12 +10,11 @@ block content
             thead
                 tr
                     th Name
-                    th Company
-                    th Actions
+                    th singer
             tbody
                 each product in products
                     tr
                         td=product.name
-                        td=product.company
+                        td=product.singer
                         td
                             a(href="/wishs/delete/"+product._id, class="btn btn-danger", id="l") Delete
